@@ -1,0 +1,81 @@
+  		
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: lime;
+		
+		font-family: Arial, sans-serif;
+      margin: 9;
+      padding: 10;
+}
+
+h1, h2, h3, h4, h5, h6, form {
+    font-family: 'Consolas', monospace;
+    color: #00FF00; 
+		  font-size: 38px;
+}
+
+a {
+    color: #00FF00;
+}
+
+p, li, td, th {
+    font-family: 'Lucida Console', monospace;
+    color: #00FF00;
+		  font-size: 28px;
+}
+
+/* Example styles for a terminal-like box */
+.code-box {
+    background-color: #111;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 2px;
+    box-shadow: 3px 3px 0 lime;
+}
+
+/* Example styles for a blinking cursor animation */
+@keyframes blink {
+    100% {
+        border-color: transparent;
+    }
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+   /* CSS for hacker-themed submit button */
+        .submit {
+            background-color: #00FF00; /* Green color */
+            border: ffffff;
+            color: #fff; /* White text */
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px #88; /* Apply a shadow effect */
+        }
+        .submit:hover {
+            background-color:   #00CC00; /* Darker green on hover */
+        }
+
+   /* CSS for hacker-themed input field */
+        .main {
+            padding: 10px;
+            background-color: #00FF00; /* Green background */
+            border: 1px solid #ffffff; /* White border */
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px #888888; /* Apply a shadow effect */
+            color: #00FF00; /* Text color */
+            font-size: 30px;
+        }
+        .main:focus {
+            background-color: #000; 
+        }
+
+
