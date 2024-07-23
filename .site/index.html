@@ -1,0 +1,243 @@
+<html>
+  <head>
+  		
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+
+    
+  
+<title> ip info </title>
+  		
+{% block content %}
+
+  
+
+<h3> ip address info </h3>
+<dir class="container">
+  <dir id="main" class="code-box1">
+      <form action="/submit" method="post">
+        <h1><input type="text" name="main" class="main"></h1>                       
+		     <h1><input type="submit" name="ip" id="submit" class="submit"></h1></form>
+  		 </dir>
+  		<div class="code-map">
+    <p>map data</p>
+    
+    <img width="200" height="200" class="img" src="https://maps.geoapify.com/v1/staticmap?style=toner-grey&width=349&height=300&center=lonlat:{{ lon }},{{ lat }}&zoom=10.9318&apiKey=83201a4a9e1e477399fe95ceb2f855e9">
+  				 
+  
+    </div>
+  
+  
+ 
+  
+	 
+ 
+  <dir class="code-data">
+		<h1> IP info data  </h1>
+		
+				<p> --------------------------</p>
+		<p>status:   {{ main }} </p>      
+				<p>resgion: {{ res }}</p>
+		  <p>isp : {{ isp }}</p>   
+<p>city : {{ city }}</p>  
+	 	<p>country: {{ con }}</p>
+		<p> lat {{ lat }}</p>
+				<p> lon {{ lon }}</p>
+		<p> --------------------------</p>
+		</dir>
+  
+  
+</dir>
+</dir>
+
+
+<style>
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    color: lime;
+    resize: both;
+    overflow: auto;
+}
+		
+		font-family:Arial, sans-serif; {
+      margin: 9;
+      padding: 10;
+}
+
+h1, h2, h3, h4, h5, h6, form {
+    font-family: 'Consolas', monospace;
+    color: #00FF00; 
+		  font-size: 38px;
+}
+
+a {
+    color: #00FF00;
+}
+
+p, li, td, th {
+    font-family: 'Lucida Console', monospace;
+    color: #00FF00;
+		  
+}
+
+/* Example styles for a terminal-like box */
+.code-box {
+    background-color: #111;
+    display: flex;
+    flex-direction: row;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 2px;
+    box-shadow: 3px 3px 0 lime;
+    resize: both;
+    overflow: auto;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+		justify-content: space-around;
+  
+}
+
+/* Example styles for a blinking cursor animation */
+@keyframes blink {
+    100% {
+        border-color: transparent;
+    }
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+   /* CSS for hacker-themed submit button */
+        .submit {
+            background-color: #00FF00; /* Green color */
+            border: ffffff;
+            color: #fff; /* White text */
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px #88; /* Apply a shadow effect */
+        }
+        .submit:hover {
+            background-color:   #00CC00; /* Darker green on hover */
+        }
+
+   /* CSS for hacker-themed input field */
+        .main {
+            padding: 5px;
+            background-color: #00FF00; /* Green background */
+            border: 1px solid #000; /* White border */
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px #888888; /* Apply a shadow effect */
+            color: #00FF00; /* Text color */
+            font-size: 20px;
+            display: flex;
+        }
+        .main:focus {
+            background-color: #000; 
+        }
+
+  		
+  		        /* CSS for hacker-themed menu bar with buttons */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            resize: both;
+            overflow: auto;
+        }
+        nav {
+            background-color: #000; /* Black background */
+            color: #00FF00; /* Green text */
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            resize: both;
+            overflow: auto;
+        }
+        .menu-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-links a {
+            color: #00FF00; /* Green text */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            resize: both;
+            overflow: auto;
+        }
+        .menu-links a:hover {
+            background-color: #00FF00; /* Green background on hover */
+            color: #000; /* Black text on hover */
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        .action-buttons button {
+            background-color: #00FF00; /* Green background for buttons */
+            color: #000; /* Black text for buttons */
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+         .img {
+     resize: both;
+     overflow: auto;
+   }
+   
+ .code-box1 {
+ 		       
+            background-color: #111;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 10px;
+            box-shadow: 3px 3px 0 lime;
+ 		         width: 300px; /* Set the width of the box */
+            height: 200px; /* Set the height of the box */
+        }
+
+ .code-map {
+            background-color: #111;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 9px;
+            box-shadow: 3px 3px 0 lime;
+ 		         resize: both;
+            overflow: auto;
+ 		         width: 200px; /* Set the width of the box */
+            height: 250px; /* Set the height of the box */
+        }
+
+.code-data {
+            background-color: #111;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 10px;
+            box-shadow: 3px 3px 0 lime;
+ 		         width: 300px; /* Set the width of the box */
+            height: 370px; /* Set the height of the box */
+        }
+
+
+</style>
+
+
+{% endblock %}
+</body>
+</html>
